@@ -8,9 +8,4 @@ public class Cliente
         Nome = nome;
         Email = email;
     }
-
-    public void FazerPedido(Pedido pedido)
-    {
-        Console.WriteLine($"{Nome} fez um pedido com {pedido.Produtos.Count} produtos.");
-    }
 }
