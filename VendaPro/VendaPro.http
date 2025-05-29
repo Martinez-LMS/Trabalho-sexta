@@ -1,0 +1,6 @@
+@VendaPro_HostAddress = http://localhost:5105
+
+GET {{VendaPro_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

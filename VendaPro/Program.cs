@@ -1,73 +1,135 @@
-﻿using System;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Hosting;
+using VendaPro.Models;  
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
-public class Program
-{
-    var pedidos = new List<Pedido>();
+var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+
+var produtos = new List<Produto>();
+var pedidos = new List<Pedido>();
 var clientes = new List<Cliente>();
-int proximoIdProduto = produtos.Max(p => p.Id) + 1;
+int proximoIdProduto = 1;
 int proximoIdPedido = 1;
 
-app.MapGet("/produtos", () => produtos);
-app.MapGet("/produtos/{id}", (int id) =>
-{
-    var p = produtos.FirstOrDefault(x => x.Id == id);
-    return p != null ? Results.Ok(p) : Results.NotFound("Produto não encontrado");
-});
-app.MapPost("/produtos", (Produto novo) =>
-{
-    novo.Id = proximoIdProduto++;
-    produtos.Add(novo);
-    return Results.Created($"/produtos/{novo.Id}", novo);
-});
-app.MapPut("/produtos/{id}", (int id, Produto atualizado) =>
-{
-    var existente = produtos.FirstOrDefault(p => p.Id == id);
-    if (existente == null) return Results.NotFound("Produto não encontrado");
 
-    existente.Nome = atualizado.Nome;
-    existente.Preco = atualizado.Preco;
-    return Results.Ok(existente);
-});
-app.MapDelete("/produtos/{id}", (int id) =>
+var app = builder.Build();
+
+// **Produtos***********************************
+
+app.MapGet("/produtos/listar", () => produtos)  
+    .WithName("ListarProdutos");
+
+app.MapGet("/produtos/obter/{id}", (int id) =>  
+{
+    var produto = produtos.FirstOrDefault(x => x.Id == id);
+    return produto != null ? Results.Ok(produto) : Results.NotFound("Produto não encontrado");
+})
+    .WithName("ObterProdutoPorId");
+
+app.MapPost("/produtos/adicionar", (Produto novoProduto) => 
+{
+    novoProduto.Id = proximoIdProduto++;
+    produtos.Add(novoProduto);
+    return Results.Created($"/produtos/{novoProduto.Id}", novoProduto);
+})
+    .WithName("AdicionarProduto");
+
+app.MapPut("/produtos/atualizar/{id}", (int id, Produto produtoAtualizado) =>  
+{
+    var produtoExistente = produtos.FirstOrDefault(p => p.Id == id);
+    if (produtoExistente == null) return Results.NotFound("Produto não encontrado");
+
+    produtoExistente.Nome = produtoAtualizado.Nome;
+    produtoExistente.Preco = produtoAtualizado.Preco;
+    return Results.Ok(produtoExistente);
+})
+    .WithName("AtualizarProduto");
+
+app.MapDelete("/produtos/deletar/{id}", (int id) =>  
 {
     var produto = produtos.FirstOrDefault(p => p.Id == id);
     if (produto == null) return Results.NotFound("Produto não encontrado");
 
     produtos.Remove(produto);
     return Results.Ok($"Produto {produto.Nome} removido.");
-});
+})
+    .WithName("DeletarProduto");
 
-app.MapPost("/clientes", (Cliente cliente) =>
+// **Clientes*****************************
+
+app.MapPost("/clientes/adicionar", (Cliente novoCliente) =>  
 {
-    clientes.Add(cliente);
-    return Results.Created("/clientes", cliente);
-});
+    clientes.Add(novoCliente);
+    return Results.Created("/clientes", novoCliente);
+})
+    .WithName("AdicionarCliente");
 
-app.MapGet("/clientes", () => clientes);
+app.MapGet("/clientes/listar", () => clientes) 
+    .WithName("ListarClientes");
 
-app.MapPost("/pedidos", (Pedido pedido) =>
+app.MapGet("/clientes/obter/{email}", (string email) => 
 {
-    pedido.Id = proximoIdPedido++;
-    pedidos.Add(pedido);
-    return Results.Created($"/pedidos/{pedido.Id}", pedido);
-});
+    var cliente = clientes.FirstOrDefault(c => c.Email == email);
+    return cliente != null ? Results.Ok(cliente) : Results.NotFound("Cliente não encontrado");
+})
+    .WithName("ObterClientePorEmail");
 
-app.MapGet("/pedidos", () => pedidos);
+app.MapDelete("/clientes/deletar/{email}", (string email) => 
+{
+    var cliente = clientes.FirstOrDefault(c => c.Email == email);
+    if (cliente == null) return Results.NotFound("Cliente não encontrado");
 
-app.MapGet("/pedidos/{id}", (int id) =>
+    clientes.Remove(cliente);
+    return Results.Ok($"Cliente {cliente.Nome} removido.");
+})
+    .WithName("DeletarCliente");
+
+// **Pedidos******************************
+
+app.MapPost("/pedidos/adicionar", (Pedido novoPedido) =>  
+{
+    novoPedido.Id = proximoIdPedido++;
+    novoPedido.CalcularTotal();
+    pedidos.Add(novoPedido);
+    return Results.Created($"/pedidos/{novoPedido.Id}", novoPedido);
+})
+    .WithName("AdicionarPedido");
+
+app.MapGet("/pedidos/listar", () => pedidos)  
+    .WithName("ListarPedidos");
+
+app.MapGet("/pedidos/obter/{id}", (int id) =>  
 {
     var pedido = pedidos.FirstOrDefault(p => p.Id == id);
     return pedido != null ? Results.Ok(pedido) : Results.NotFound("Pedido não encontrado");
-});
+})
+    .WithName("ObterPedidoPorId");
 
-app.MapDelete("/pedidos/{id}", (int id) =>
+app.MapDelete("/pedidos/deletar/{id}", (int id) => 
 {
     var pedido = pedidos.FirstOrDefault(p => p.Id == id);
     if (pedido == null) return Results.NotFound("Pedido não encontrado");
+
     pedidos.Remove(pedido);
     return Results.Ok($"Pedido #{pedido.Id} removido.");
-});
+})
+    .WithName("DeletarPedido");
+
+app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
+
+
+    app.UseSwagger();
+    app.UseSwaggerUI(); 
+
 
 app.Run();
-    }
