@@ -5,7 +5,7 @@ namespace VendaPro.Models
         public int Id { get; set; }
         public DateTime DataPedido { get; set; }
         public List<Produto> Produtos { get; set; } = new List<Produto>();
-        public double Total { get; set; }
+        public decimal Total { get; set; }
 
         public Pedido()
         {

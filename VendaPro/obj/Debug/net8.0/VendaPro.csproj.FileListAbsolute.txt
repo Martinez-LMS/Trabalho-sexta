@@ -65,3 +65,37 @@ C:\Users\Marti\Desktop\trabalho sexta atual api\Trabalho-sexta\Trabalho-sexta\Ve
 C:\Users\Marti\Desktop\trabalho sexta atual api\Trabalho-sexta\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.pdb
 C:\Users\Marti\Desktop\trabalho sexta atual api\Trabalho-sexta\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.genruntimeconfig.cache
 C:\Users\Marti\Desktop\trabalho sexta atual api\Trabalho-sexta\Trabalho-sexta\VendaPro\obj\Debug\net8.0\ref\VendaPro.dll
+C:\_ws\C#\Trabalho-sexta\VendaPro\bin\Debug\net8.0\appsettings.Development.json
+C:\_ws\C#\Trabalho-sexta\VendaPro\bin\Debug\net8.0\appsettings.json
+C:\_ws\C#\Trabalho-sexta\VendaPro\bin\Debug\net8.0\VendaPro.exe
+C:\_ws\C#\Trabalho-sexta\VendaPro\bin\Debug\net8.0\VendaPro.deps.json
+C:\_ws\C#\Trabalho-sexta\VendaPro\bin\Debug\net8.0\VendaPro.runtimeconfig.json
+C:\_ws\C#\Trabalho-sexta\VendaPro\bin\Debug\net8.0\VendaPro.dll
+C:\_ws\C#\Trabalho-sexta\VendaPro\bin\Debug\net8.0\VendaPro.pdb
+C:\_ws\C#\Trabalho-sexta\VendaPro\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\_ws\C#\Trabalho-sexta\VendaPro\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\_ws\C#\Trabalho-sexta\VendaPro\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\_ws\C#\Trabalho-sexta\VendaPro\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\_ws\C#\Trabalho-sexta\VendaPro\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.csproj.AssemblyReference.cache
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.GeneratedMSBuildEditorConfig.editorconfig
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.AssemblyInfoInputs.cache
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.AssemblyInfo.cs
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.csproj.CoreCompileInputs.cache
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.MvcApplicationPartsAssemblyInfo.cs
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.MvcApplicationPartsAssemblyInfo.cache
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.sourcelink.json
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\staticwebassets.build.json
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\staticwebassets.development.json
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\staticwebassets\msbuild.VendaPro.Microsoft.AspNetCore.StaticWebAssets.props
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\staticwebassets\msbuild.build.VendaPro.props
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.VendaPro.props
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.VendaPro.props
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\staticwebassets.pack.json
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\scopedcss\bundle\VendaPro.styles.css
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.csproj.Up2Date
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.dll
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\refint\VendaPro.dll
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.pdb
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\VendaPro.genruntimeconfig.cache
+C:\_ws\C#\Trabalho-sexta\VendaPro\obj\Debug\net8.0\ref\VendaPro.dll

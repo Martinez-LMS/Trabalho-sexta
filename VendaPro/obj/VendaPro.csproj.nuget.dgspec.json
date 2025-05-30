@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marti\\Desktop\\trabalho sexta atual api\\Trabalho-sexta\\Trabalho-sexta\\VendaPro\\VendaPro.csproj": {}
+    "C:\\_ws\\C#\\Trabalho-sexta\\VendaPro\\VendaPro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marti\\Desktop\\trabalho sexta atual api\\Trabalho-sexta\\Trabalho-sexta\\VendaPro\\VendaPro.csproj": {
+    "C:\\_ws\\C#\\Trabalho-sexta\\VendaPro\\VendaPro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marti\\Desktop\\trabalho sexta atual api\\Trabalho-sexta\\Trabalho-sexta\\VendaPro\\VendaPro.csproj",
+        "projectUniqueName": "C:\\_ws\\C#\\Trabalho-sexta\\VendaPro\\VendaPro.csproj",
         "projectName": "VendaPro",
-        "projectPath": "C:\\Users\\Marti\\Desktop\\trabalho sexta atual api\\Trabalho-sexta\\Trabalho-sexta\\VendaPro\\VendaPro.csproj",
-        "packagesPath": "C:\\Users\\Marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marti\\Desktop\\trabalho sexta atual api\\Trabalho-sexta\\Trabalho-sexta\\VendaPro\\obj\\",
+        "projectPath": "C:\\_ws\\C#\\Trabalho-sexta\\VendaPro\\VendaPro.csproj",
+        "packagesPath": "C:\\Users\\glinc\\.nuget\\packages\\",
+        "outputPath": "C:\\_ws\\C#\\Trabalho-sexta\\VendaPro\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\glinc\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -73,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VendaPro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+402e3da9f75b6a15a01ab50f7ee8c6a03822a111")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d7b82b7ed7f3af5514dde9037aa1a3ededa075c")]
 [assembly: System.Reflection.AssemblyProductAttribute("VendaPro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VendaPro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
