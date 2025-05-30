@@ -6,11 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddEndpointsApiExplorer();     
 builder.Services.AddSwaggerGen();
 
 var produtos = new List<Produto>();
@@ -18,6 +19,11 @@ var pedidos = new List<Pedido>();
 var clientes = new List<Cliente>();
 int proximoIdProduto = 1;
 int proximoIdPedido = 1;
+
+bool NomeEhValido(string nome) => !string.IsNullOrWhiteSpace(nome) && !nome.Any(char.IsDigit);
+bool EmailEhValido(string email) => Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+bool PrecoEhValido(decimal preco) => preco >= 0;
+bool QuantidadeEhValida(int quantidade) => quantidade >= 0;
 
 var app = builder.Build();
 
@@ -34,7 +40,11 @@ app.MapGet("/produtos/obter/{id}", (int id) =>
 
 app.MapPost("/produtos/adicionar", (Produto novoProduto) =>
 {
-    if (string.IsNullOrWhiteSpace(novoProduto.Nome) || novoProduto.Nome.Any(char.IsDigit))
+    if (!PrecoEhValido(novoProduto.Preco)) return Results.BadRequest("Preço do produto não pode ser negativo.");
+    if (!QuantidadeEhValida(novoProduto.Quantidade)) return Results.BadRequest("Quantidade do produto não pode ser negativo.");
+    
+
+    if (string.IsNullOrWhiteSpace(novoProduto.Nome))
         return Results.BadRequest("Nome do produto inválido");
 
     if (novoProduto.Preco < 0 || novoProduto.Quantidade < 0)
@@ -49,6 +59,7 @@ app.MapPost("/produtos/adicionar", (Produto novoProduto) =>
 app.MapPut("/produtos/atualizar/{id}", (int id, Produto produtoAtualizado) =>
 {
     var produtoExistente = produtos.FirstOrDefault(p => p.Id == id);
+    if (!PrecoEhValido(produtoAtualizado.Preco)) return Results.BadRequest("Preço do produto não pode ser negativo.");
     if (produtoExistente == null) return Results.NotFound("Produto não encontrado");
 
     if (string.IsNullOrWhiteSpace(produtoAtualizado.Nome) || produtoAtualizado.Nome.Any(char.IsDigit))
@@ -76,6 +87,8 @@ app.MapDelete("/produtos/deletar/{id}", (int id) =>
 // Clientes
 app.MapPost("/clientes/adicionar", (Cliente novoCliente) =>
 {
+    if (!NomeEhValido(novoCliente.Nome)) return Results.BadRequest("Nome do cliente inválido.");
+    if (!EmailEhValido(novoCliente.Email)) return Results.BadRequest("Email inválido.");
     if (string.IsNullOrWhiteSpace(novoCliente.Nome) || novoCliente.Nome.Any(char.IsDigit))
         return Results.BadRequest("Nome inválido");
 

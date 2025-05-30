@@ -460,19 +460,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\glinc\\.nuget\\packages\\": {}
+    "C:\\Users\\GABRIELLINCONDEMETRI\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\_ws\\C#\\Trabalho-sexta\\VendaPro\\VendaPro.csproj",
+      "projectUniqueName": "C:\\GABRIEL\\C#\\Trabalho-sexta\\VendaPro\\VendaPro.csproj",
       "projectName": "VendaPro",
-      "projectPath": "C:\\_ws\\C#\\Trabalho-sexta\\VendaPro\\VendaPro.csproj",
-      "packagesPath": "C:\\Users\\glinc\\.nuget\\packages\\",
-      "outputPath": "C:\\_ws\\C#\\Trabalho-sexta\\VendaPro\\obj\\",
+      "projectPath": "C:\\GABRIEL\\C#\\Trabalho-sexta\\VendaPro\\VendaPro.csproj",
+      "packagesPath": "C:\\Users\\GABRIELLINCONDEMETRI\\.nuget\\packages\\",
+      "outputPath": "C:\\GABRIEL\\C#\\Trabalho-sexta\\VendaPro\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\glinc\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\GABRIELLINCONDEMETRI\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -529,7 +529,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
