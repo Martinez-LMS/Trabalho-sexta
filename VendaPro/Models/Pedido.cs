@@ -1,20 +1,8 @@
-namespace VendaPro.Models
+public class Pedido
 {
-    public class Pedido
-    {
-        public int Id { get; set; }
-        public DateTime DataPedido { get; set; }
-        public List<Produto> Produtos { get; set; } = new List<Produto>();
-        public decimal Total { get; set; }
-
-        public Pedido()
-        {
-            DataPedido = DateTime.Now;
-        }
-
-        public void CalcularTotal()
-        {
-            Total = Produtos.Sum(p => p.Preco * p.Quantidade);
-        }
-    }
+    public int Id { get; set; }
+    public int ClienteId { get; set; }
+    public DateTime DataPedido { get; set; } = DateTime.Now;
+    public List<ItemPedido> Itens { get; set; } = new List<ItemPedido>();
+    public decimal Total { get; set; }
 }
