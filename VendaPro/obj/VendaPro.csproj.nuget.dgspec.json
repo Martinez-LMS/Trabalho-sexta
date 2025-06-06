@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GABRIEL\\C#\\Trabalho-sexta\\VendaPro\\VendaPro.csproj": {}
+    "C:\\Users\\Marti\\Desktop\\Nova pasta (3)\\Trabalho-sexta\\VendaPro\\VendaPro.csproj": {}
   },
   "projects": {
-    "C:\\GABRIEL\\C#\\Trabalho-sexta\\VendaPro\\VendaPro.csproj": {
+    "C:\\Users\\Marti\\Desktop\\Nova pasta (3)\\Trabalho-sexta\\VendaPro\\VendaPro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GABRIEL\\C#\\Trabalho-sexta\\VendaPro\\VendaPro.csproj",
+        "projectUniqueName": "C:\\Users\\Marti\\Desktop\\Nova pasta (3)\\Trabalho-sexta\\VendaPro\\VendaPro.csproj",
         "projectName": "VendaPro",
-        "projectPath": "C:\\GABRIEL\\C#\\Trabalho-sexta\\VendaPro\\VendaPro.csproj",
-        "packagesPath": "C:\\Users\\GABRIELLINCONDEMETRI\\.nuget\\packages\\",
-        "outputPath": "C:\\GABRIEL\\C#\\Trabalho-sexta\\VendaPro\\obj\\",
+        "projectPath": "C:\\Users\\Marti\\Desktop\\Nova pasta (3)\\Trabalho-sexta\\VendaPro\\VendaPro.csproj",
+        "packagesPath": "C:\\Users\\Marti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Marti\\Desktop\\Nova pasta (3)\\Trabalho-sexta\\VendaPro\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\GABRIELLINCONDEMETRI\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Marti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
